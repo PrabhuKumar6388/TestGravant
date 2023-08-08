@@ -1,0 +1,33 @@
+public class RecentPlayedSongs {
+	public static void main(String[] args) {
+	    
+		List<String> arr= new ArrayList<>();
+		arr.add("s1");
+		arr.add("s2");
+		arr.add("s3");
+		Scanner sca=new Scanner(System.in);
+		System.out.print("Enter the iterate number: ");
+		int n = sca.nextInt();
+	    for(int i=1;i<=n;i++) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the song name: ");
+		String lastestSong = sc.nextLine();
+		arr.add(lastestSong);
+			if(arr.size()>3) {
+				arr.remove(0);				
+				System.out.println(arr);
+			 
+			}	
+	    }
+	}
+}
+//output
+// Enter the iterate number: 4
+// Enter the song name: s4
+// [s2, s3, s4]
+// Enter the song name: s2
+// [s3, s4, s2]
+// Enter the song name: s1
+// [s4, s2, s1]
+// Enter the song name: s4
+// [s2, s1, s4]
